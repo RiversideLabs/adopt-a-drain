@@ -1,13 +1,10 @@
 .table
   .table-row
     .table-cell.sidebar
-      %a{:href => "http://www2.oaklandnet.com/"}
-        = image_tag "logos/citytree_green_small.jpg", :style => "margin-top:10px", :width => '90px', :alt => t("sponsors.city"), :title => t("sponsors.city")    
+      %a{:href => "https://www.riversideca.gov"}
+        = image_tag "https://www.riversideca.gov/images/2013/althorzblkbell2.png", :style => "margin-top:10px;margin-bottom:12px", :width => '189px', :alt => t("sponsors.city"), :title => t("sponsors.city")
       %h1
         Adopt a Drain
-      %h4
-        Part of 
-        %a{:href => 'http://www.oaklandadoptaspot.org'}Oakland Adopt a Spot
 
       %p.alert-message.block-message#tagline
         = t("defaults.tagline")
@@ -18,22 +15,22 @@
         - else
           = render :partial => "sidebar/combo_form"
       #logos
-        %a{:href => "http://openoakland.org/"}
-          = image_tag "logos/openoakland.png", :width => '180px', :alt => t("sponsors.cfa"), :title => t("sponsors.cfa")
+        %a{:href => "http://engageriverside.com/"}
+          = image_tag "https://riversideca.gov/images/2012/cor-logo-30x30.png", :width => '30px', :alt => t("sponsors.cfa"), :title => t("sponsors.cfa")
 
       #feedback
         %br
         %br
         %br
         %p
-          Report maintenance needs to the 
-          %a{:href => URI.escape("http://www2.oaklandnet.com/Government/o/PWA/Connect/ReportaProblem/index.htm")} City of Oakland Public Works Agency
+          Report maintenance needs to the
+          %a{:href => URI.escape("https://riversideca.gov/publicworks")} City of Riverside Public Works Department
           or visit
-          %a{:href => "http://www.seeclickfix.com/oakland"}www.seeclickfix.com/oakland
+          %a{:href => "http://crmweb.riversideca.gov"}crmweb.riversideca.gov
         %p{:style => "font-size: 120%"}
-          %a{:href => URI.escape("mailto:pboylerodriguez@oaklandnet.com?subject=#{t("titles.main", :thing => t("defaults.thing").titleize)} #{t("links.feedback").titleize}")}
+          %a{:href => URI.escape("mailto:webmaster@riversideca.gov?subject=#{t("titles.main", :thing => t("defaults.thing").titleize)} #{t("links.feedback").titleize}")}
             = t("links.feedback")
     .table-cell.map-container
-      #map        
+      #map
         &nbsp;
       #legend

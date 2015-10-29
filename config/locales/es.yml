@@ -22,10 +22,10 @@ es:
     required: "(necesario)"
   defaults:
     address: "dirección"
-    address_1: "1 Frank H. Ogawa Plaza, Oakland, CA"
+    address_1: "3900 Main Street, Riverside, CA"
     address_2: ""
-    city: "Oakland"
-    city_state: "Oakland, California"
+    city: "Riverside"
+    city_state: "Riverside, California"
     neighborhood: "Downtown"
     sms_number: "510-555-1212"
     state: "CA"
@@ -85,7 +85,7 @@ es:
   sponsors:
     built: "Construido en Boston"
     cfa: "Código de los Estados Unidos"
-    city: "Ciudad de Oakland"
+    city: "Ciudad de Riverside"
     mayor:
-      name: "Jean Quan"
+      name: "William Bailey"
       title: "Mayor"
