@@ -5,12 +5,13 @@ require 'open-uri'
 
 # url = '/Users/eddie/Downloads/drainswgs84.csv'
 # url = 'http://data.openoakland.org/storage/f/2012-11-01T014902/Inlets.csv'
-url = 'http://data.openoakland.org/en/storage/f/2013-12-08T214045/drainswgs84.csv'
+#url = '/vagrant/db/StormDrainPtsDD.csv'
+url = 'http://christilden.com/db/StormDrainPtsDD.csv'
 
 # puts 'removing old things data'
 # Thing.destroy_all
 create_thing = 0
-update_thing = 0          
+update_thing = 0
 failed_update = 0
 nil_thing = 0
 puts 'connecting'
@@ -18,59 +19,60 @@ open(url) do |f|
   puts 'downloading'
   f.each_line do |l|
     CSV.parse(l) do |row|
-      
-      if(row[0] == "OBJECTID_1")
+
+      # skips first row and all non-inlet rows
+      if(row[0] == "ID" || row[4] != "Inlet")
         next
       else
         city_id = row[0].to_i
-        lat = row[6].to_f
-        lng = row[7].to_f
-        puts "#{row} "        
+        lat = row[3].to_f
+        lng = row[2].to_f
+        puts "#{row} "
 
-        if city_id > 1        
-          
-          
-          
+        if city_id > 1
+
+
+
           drain = Thing.find_by_city_id( city_id )
-          
+
           puts "#{city_id} #{lng} #{lat}"
-          
+
           if drain
-            puts "UPDATING #{city_id} #{lng} #{lat} "                    
-            update_thing = update_thing + 1            
+            puts "UPDATING #{city_id} #{lng} #{lat} "
+            update_thing = update_thing + 1
           else
-            puts "CREATING NEW #{city_id} #{lng} #{lat} "        
-            drain = Thing.new({:city_id => city_id, :lng => lng, :lat => lat})          
-            create_thing = create_thing + 1            
+            puts "CREATING NEW #{city_id} #{lng} #{lat} "
+            drain = Thing.new({:city_id => city_id, :lng => lng, :lat => lat})
+            create_thing = create_thing + 1
           end
-          
+
 
           updated_successul = false
           if !lng.nil? && !lat.nil?
-            drain.update_attributes({:lng => lng, :lat => lat})          
-            updated_successul = drain.save!            
+            drain.update_attributes({:lng => lng, :lat => lat})
+            updated_successul = drain.save!
           else
-            nil_thing = nil_thing + 1            
-            
+            nil_thing = nil_thing + 1
+
           end
-          
-          
-          
+
+
+
           if updated_successul
-            puts "SAVED"                                             
+            puts "SAVED"
           else
             puts "FAILED"
-            failed_update = failed_update + 1                        
+            failed_update = failed_update + 1
           end
 
 
         end
       end
     end
-  end 
+  end
 end
 
-puts "Total created #{create_thing} and #{update_thing} updated, #{failed_update} failed and #{nil_thing} were nil"          
+puts "Total created #{create_thing} and #{update_thing} updated, #{failed_update} failed and #{nil_thing} were nil"
 
 
 # Thing.create(:city_id =>  1, :lng => -157.74898782223062, :lat=> 21.376607020832314)
