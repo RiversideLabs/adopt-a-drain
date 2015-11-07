@@ -34,3 +34,5 @@ group :test do
   gem 'sqlite3'
   gem 'webmock'
 end
+
+ruby '1.9.3'
