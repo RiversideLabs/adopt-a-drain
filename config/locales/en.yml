@@ -2,7 +2,7 @@
 
 en:
   buttons:
-    abandon: "Abandon this %{thing}"
+    abandon: "Unadopt this %{thing}"
     adopt: "Adopt!"
     back: "Back"
     change_password: "Change my password"
@@ -64,7 +64,7 @@ en:
     forgot_password: "Forgot your password?"
     remembered_password: "Never mind. I remembered my password."
   notices:
-    abandoned: "%{thing} abandoned!"
+    abandoned: "%{thing} unadopted!"
     adopted: "You just adopted a %{thing}!"
     password_reset: "Password reset instructions sent! Check your email."
     reminder_sent: "Reminder sent!"
