@@ -4,9 +4,7 @@ require 'open-uri'
 
 
 # url = '/Users/eddie/Downloads/drainswgs84.csv'
-# url = 'http://data.openoakland.org/storage/f/2012-11-01T014902/Inlets.csv'
-#url = '/vagrant/db/StormDrainPtsDD.csv'
-url = 'http://christilden.com/db/StormDrainPtsDD.csv'
+url = 'http://riversideca.gov/publicworks/adopt-a-drain/StormDrainPtsDD.csv'
 
 # puts 'removing old things data'
 # Thing.destroy_all
