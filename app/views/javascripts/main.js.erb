@@ -49,14 +49,14 @@ function load() {
       mapTypes: [google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.SATELLITE]
     },
     mapTypeId: google.maps.MapTypeId.ROADMAP,
-    maxZoom: 16,
-    minZoom: 14,
+    maxZoom: 19,
+    minZoom: 16,
     panControl: false,
     rotateControl: false,
     scaleControl: false,
     scrollwheel: true,
     streetViewControl: true,
-    zoom: 15,
+    zoom: 17,
     zoomControl: true
   };
 
@@ -64,6 +64,7 @@ function load() {
   var size = new google.maps.Size(29.0, 37.0);
   var origin = new google.maps.Point(0, 0);
   var anchor = new google.maps.Point(13.0, 18.0);
+  var runningThingAjax;
   var greenMarkerImage = new google.maps.MarkerImage('<%= image_path 'markers/green-marker.png' %>',
     size,
     origin,
@@ -176,7 +177,11 @@ function load() {
   }
   function addMarkersAround(lat, lng, NE, SW) {
     var submitButton = $("#address_form input[type='submit']");
-    $.ajax({
+    if (runningThingAjax != null) {
+      runningThingAjax.abort();
+      runningThingAjax = null;
+    }
+    runningThingAjax = $.ajax({
       type: 'GET',
       url: '/things.json',
       data: {
