@@ -60,7 +60,6 @@ GEM
       multi_json (>= 1.3.2)
     google-v3-geocoder (1.0.0)
       geokit (>= 1.5.0)
-      geokit (>= 1.5.0)
       json
     haml (3.2.0.rc.2)
       tilt
@@ -143,7 +142,6 @@ GEM
       tilt (~> 1.3)
     sendgrid (1.0.1)
       json
-      json
     simplecov (0.7.1)
       multi_json (~> 1.0)
       simplecov-html (~> 0.7.1)
@@ -199,3 +197,6 @@ DEPENDENCIES
   uglifier
   validates_formatting_of
   webmock
+
+BUNDLED WITH
+   1.10.6
