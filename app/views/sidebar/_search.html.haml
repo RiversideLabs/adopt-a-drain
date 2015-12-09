@@ -12,6 +12,7 @@
       = t("buttons.edit_profile")
     %a{:href => destroy_user_session_path, :id => "sign_out_link", :class => "btn danger"}
       = t("buttons.sign_out")
+= render :partial => "sidebar/tos"
 :javascript
   $(function() {
     $('#address').focus();

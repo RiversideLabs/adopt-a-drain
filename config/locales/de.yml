@@ -33,6 +33,7 @@ de:
     this_thing: "Dieser %{thing}"
     tagline: "Claim Verantwortung für die Führung der %{thing} Eingang klar."
     tos: "Mit der Anmeldung erklären Sie sich mit den %{tos}."
+    tos2: "%{tos}"
     voice_number: "510-555-1212"
     zip: "94612"
   errors:

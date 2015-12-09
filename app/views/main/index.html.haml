@@ -24,9 +24,9 @@
         %br
         %p
           Report maintenance needs to the
-          %a{:href => URI.escape("https://riversideca.gov/publicworks")} City of Riverside Public Works Department
-          or visit
-          %a{:href => "http://crmweb.riversideca.gov"}crmweb.riversideca.gov
+          %a{:href => URI.escape("http://crmweb.riversideca.gov")} City of Riverside 311 Call Center
+        %p
+          = t("defaults.tos2", :tos => link_to(t("titles.tos"), "#tos", :id => "tos_link", "data-target"=>"#tos", "data-toggle"=>"modal")).html_safe
         %p{:style => "font-size: 120%"}
           %a{:href => URI.escape("mailto:webmaster@riversideca.gov?subject=#{t("titles.main", :thing => t("defaults.thing").titleize)} #{t("links.feedback").titleize}")}
             = t("links.feedback")

@@ -33,6 +33,7 @@ es:
     this_thing: "Esta %{thing}"
     tagline: "Reclamar la responsabilidad para limpiar la entrada drenaje pluvial."
     tos: "Al registrarse, usted está de acuerdo con los %{tos}."
+    tos2: "%{tos}"
     voice_number: "510-555-1212"
     zip: "94612"
   errors:

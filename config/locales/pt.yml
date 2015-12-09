@@ -33,6 +33,7 @@ pt:
     this_thing: "Este %{thing}"
     tagline: "Responsabilidade pedido de pá para fora um %{thing} de incêndio depois que neva."
     tos: "Ao inscrever-se, você concorda com os %{tos}."
+    tos2: "%{tos}"
     voice_number: "510-555-1212"
     zip: "94612"
   errors:
