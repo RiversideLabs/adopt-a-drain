@@ -33,6 +33,7 @@ en:
     this_thing: "This %{thing}"
     tagline: "Volunteer to keep a drain clear and report any problems!"
     tos: "By signing up you agree to the %{tos}"
+    tos2: "%{tos}"
     voice_number: "510-555-1212"
     zip: "94612"
   errors:
