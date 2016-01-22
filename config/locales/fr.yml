@@ -82,6 +82,7 @@ fr:
     ofline: "de %{organization}"
     sign_in: "Connectez-vous à adopter cette %{thing}"
     thank_you: "Merci pour l'adoption de cette %{thing}!"
+    drain_id: "(Drain ID # %{city_id})"
     tos: "Conditions d'utilisation"
   sponsors:
     cfa: "Code pour l'Amérique"

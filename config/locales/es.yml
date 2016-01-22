@@ -82,6 +82,7 @@ es:
     ofline: "de %{organization}"
     sign_in: "Iniciar sesión para adoptar esta %{thing}"
     thank_you: "Gracias por la adopción de esta %{thing}!"
+    drain_id: "(Drain ID # %{city_id})"
     tos: "Términos de Servicio"
   sponsors:
     built: "Construido en Boston"

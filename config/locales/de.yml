@@ -82,6 +82,7 @@ de:
     ofline: "der %{organization}"
     sign_in: "Melden Sie sich in diesem %{thing} übernehmen"
     thank_you: "Vielen Dank für die Annahme dieser %{thing}!"
+    drain_id: "(Drain ID # %{city_id})"
     tos: "Nutzungsbedingungen"
   sponsors:
     built: "Erbaut in Boston"

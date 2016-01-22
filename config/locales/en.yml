@@ -82,6 +82,7 @@ en:
     ofline: "of %{organization}"
     sign_in: "Sign in to adopt this %{thing}"
     thank_you: "Thank you for adopting this %{thing}!"
+    drain_id: "(Drain ID # %{city_id})"
     tos: "Terms of Service & Volunteer Guidelines"
   sponsors:
     cfa: "Code for America"
