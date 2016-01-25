@@ -1,5 +1,9 @@
 %h4
   = t("titles.adopted", :thing_name => @thing.name ? @thing.name.titleize : t("defaults.this_thing", :thing => t("defaults.thing")))
+
+%p
+  = t("titles.drain_id", :city_id => @thing.city_id)
+
 - @thing.users.each do |u|
   = t("titles.byline", :name => u.name)
   = t("titles.ofline", :organization => u.organization) unless u.organization.blank?
