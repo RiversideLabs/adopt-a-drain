@@ -25,6 +25,8 @@ open(url) do |f|
         city_id = row[0].to_i
         lat = row[3].to_f
         lng = row[2].to_f
+        ward = row[23]
+        neighborhood = row[22]
         puts "#{row} "
 
         if city_id > 1
@@ -40,14 +42,14 @@ open(url) do |f|
             update_thing = update_thing + 1
           else
             puts "CREATING NEW #{city_id} #{lng} #{lat} "
-            drain = Thing.new({:city_id => city_id, :lng => lng, :lat => lat})
+            drain = Thing.new({:city_id => city_id, :lng => lng, :lat => lat, :ward => ward, :neighborhood => neighborhood})
             create_thing = create_thing + 1
           end
 
 
           updated_successul = false
           if !lng.nil? && !lat.nil?
-            drain.update_attributes({:lng => lng, :lat => lat})
+            drain.update_attributes({:lng => lng, :lat => lat, :ward => ward, :neighborhood => neighborhood})
             updated_successul = drain.save!
           else
             nil_thing = nil_thing + 1

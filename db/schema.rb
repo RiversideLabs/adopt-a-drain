@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130225055407) do
+ActiveRecord::Schema.define(:version => 20160217215554) do
 
   create_table "geometry_columns", :id => false, :force => true do |t|
     t.string  "f_table_catalog",   :limit => 256, :null => false
@@ -74,6 +74,8 @@ ActiveRecord::Schema.define(:version => 20130225055407) do
     t.decimal  "lat",        :precision => 16, :scale => 14, :null => false
     t.decimal  "lng",        :precision => 17, :scale => 14, :null => false
     t.integer  "city_id"
+    t.string   "ward"
+    t.string   "neighborhood"
   end
 
   add_index "things", ["city_id"], :name => "index_things_on_city_id", :unique => true
